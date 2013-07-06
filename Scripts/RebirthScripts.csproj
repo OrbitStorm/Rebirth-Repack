@@ -1,0 +1,4143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0271B3D-C776-4981-919D-06FEA403A21A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Scripts</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Server</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>Output\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>Output\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RunUO">
+      <HintPath>..\RunUO.exe</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounting\Account.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountAttackLimiter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountComment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountManagement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountManagementGumps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounting\Accounts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccountTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounting\CommentsGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounting\Firewall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounting\IPLimiter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Accounting\Smtp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Commands\BaseCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Commands\Commands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Commands\Interface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Implementors\AreaCommandImplementor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Implementors\BaseCommandImplementor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Implementors\ContainedCommandImplementor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Implementors\GlobalCommandImplementor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Implementors\MultiCommandImplementor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Implementors\ObjectConditional.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Implementors\OnlineCommandImplementor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Implementors\RegionCommandImplementor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Implementors\SelfCommandImplementor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Abstracted\Implementors\SingleCommandImplementor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Add.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Attributes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Batch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\BoundingBoxPicker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\ConvertPlayers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Dupe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\ExportWSC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\GenCategorization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\GenTeleporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Handlers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Logging.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\LOSCheck.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Properties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\SignParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Skills.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\SkillsMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\VisibilityList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Wipe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Context Menus\AddToSpellbookEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Context Menus\Disabled.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Context Menus\EatEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Context Menus\OpenBankEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Context Menus\TeachEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\AI\AnimalAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\AI\ArcherAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\AI\BaseAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\AI\BerserkAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\AI\HealerAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\AI\MageAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\AI\MeeleeAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\AI\PredatorAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\AI\ThiefAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\AI\VendorAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\Creature\BaseConvo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\Creature\BaseCreature.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\Creature\Dummy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\Creature\DummySpecific.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\Creature\SpeedInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\Targets\AIControlMobileTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\Team\Team.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\AI\Team\TeamRegistry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Chat\Channel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Chat\Chat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Chat\ChatActionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Chat\ChatActionHandlers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Chat\ChatCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Chat\Chatold.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Chat\ChatUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Chat\Packets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Craft\Alchemy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Craft\Blacksmithy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Craft\Carpentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Craft\Cartography.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Craft\Core\CraftCore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Craft\Fletching.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Craft\Inscribe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Craft\Tailoring.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Craft\Tinkering.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Harvest\Core\HarvestBank.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Harvest\Core\HarvestDefinition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Harvest\Core\HarvestResource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Harvest\Core\HarvestSoundTimer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Harvest\Core\HarvestSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Harvest\Core\HarvestTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Harvest\Core\HarvestTimer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Harvest\Core\HarvestVein.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Harvest\Fishing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Harvest\Lumberjacking.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Harvest\Mining.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Help\HelpGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Help\PagePrompt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Help\PagePromptGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Help\PageQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Help\PageQueueGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Help\PageResponseGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Help\StuckMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\MyRunUO\Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\MyRunUO\DatabaseCommandQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\MyRunUO\LayerComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\MyRunUO\MyRunUO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\MyRunUO\MyRunUOStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Pathing\FastAStarAlgorithm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Pathing\Movement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Pathing\MovementPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Pathing\MoveResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Pathing\PathAlgorithm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Pathing\PathFollower.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Pathing\SlowAStarAlgorithm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Spawner\PredefSpawners.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Spawner\Spawner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Spawner\SpawnerGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\Spawner\SpawnerType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\VeteranRewards\RewardCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\VeteranRewards\RewardChoiceGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\VeteranRewards\RewardConfirmGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\VeteranRewards\RewardEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\VeteranRewards\RewardList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\VeteranRewards\RewardNoticeGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engines\VeteranRewards\RewardSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\AddDoorGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\AddGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\AdminGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\BanDurationGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\BaseGridGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\CategorizedAddGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\ClientGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\ConfirmReleaseGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Go\ChildNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Go\GoGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Go\LocationTree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Go\ParentNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\DeclareFealtyGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GrantGuildTitleGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildAbbrvPrompt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildAcceptWarGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildAdminCandidatesGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildCandidatesGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildChangeTypeGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildCharterGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildCharterPrompt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildDeclarePeaceGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildDeclareWarGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildDeclareWarPrompt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildDismissGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildListGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildmasterGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildMobileListGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildNamePrompt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildRejectWarGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildRescindDeclarationGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildRosterGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildTitlePrompt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildWarAdminGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildWarGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\GuildWebsitePrompt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Guilds\RecruitTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\NoticeGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\PetResurrectGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\PlayerVendorGumps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\PolymorphGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Properties\PropsConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Properties\PropsGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Properties\SetBodyGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Properties\SetCustomEnumGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Properties\SetGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Properties\SetListOptionGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Properties\SetObjectGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Properties\SetObjectTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Properties\SetPoint2DGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Properties\SetPoint3DGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\Properties\SetTimeSpanGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\ReportMurderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\ResNowOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\RessurectGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\SkillsGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\TithingGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\UpdatesGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\WarningGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gumps\WhoGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\AbbatoirAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\AddonComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\AnvilEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\AnvilSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\ArcheryButteAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\BaseAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\BaseAddonDeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\BearRugs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\BloodPentagram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\FlourMillEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\FlourMillSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\FlowerTapestries.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\GrayBrickFireplaceEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\GrayBrickFireplaceSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\LargeBedEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\LargeBedSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\LargeForgeEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\LargeForgeSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\LargeStoneTableEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\LargeStoneTableSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\LoomEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\LoomSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\MediumStoneTableEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\MediumStoneTableSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\PentagramAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\PickpocketDips.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\SandstoneFireplaceEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\SandstoneFireplaceSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\SandstoneFountainAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\ShrineOfWisdomAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\SHTeleporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\SmallBedEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\SmallBedSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\SmallForgeAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\SpinningwheelEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\SpinningwheelSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\StoneFireplaceEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\StoneFireplaceSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\StoneFountainAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\StoneOvenEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\StoneOvenSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\StretchedHides.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\Telescope.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\TrainingDummies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\WaterTroughEastAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Addons\WaterTroughSouthAddon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\ArmorEnums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\ArmorOfFortune.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\GauntletsOfNobility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\HelmOfInsight.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\HolyKnightsBreastplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\InquisitorsResolution.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\JackalsCollar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\LeggingsOfBane.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\MidnightBracers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\OrnateCrownOfTheHarrower.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\ShadowDancerLeggings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\TunicOfFire.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Artifacts\VoiceOfTheFallenKing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\BaseArmor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Bone\BoneArms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Bone\BoneChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Bone\BoneGloves.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Bone\BoneLegs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Chain\ChainChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Chain\ChainLegs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\DaemonBone\DaemonArms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\DaemonBone\DaemonChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\DaemonBone\DaemonGloves.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\DaemonBone\DaemonLegs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Dragon\DragonArms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Dragon\DragonChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Dragon\DragonGloves.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Dragon\DragonHelm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Dragon\DragonLegs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Helmets\Bascinet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Helmets\BoneHelm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Helmets\ChainCoif.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Helmets\CloseHelm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Helmets\DaemonHelm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Helmets\Helmet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Helmets\LeatherCap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Helmets\NorseHelm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Helmets\OrcHelm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Helmets\PlateHelm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Leather\FemaleLeatherChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Leather\LeatherArms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Leather\LeatherBustierArms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Leather\LeatherChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Leather\LeatherGloves.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Leather\LeatherGorget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Leather\LeatherLegs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Leather\LeatherShorts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Leather\LeatherSkirt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Plate\FemalePlateChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Plate\PlateArms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Plate\PlateChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Plate\PlateGloves.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Plate\PlateGorget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Plate\PlateLegs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Ranger\RangerArms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Ranger\RangerChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Ranger\RangerGloves.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Ranger\RangerGorget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Ranger\RangerLegs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Ring\RingmailArms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Ring\RingmailChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Ring\RingmailGloves.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Ring\RingmailLegs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Studded\FemaleStuddedChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Studded\StuddedArms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Studded\StuddedBustierArms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Studded\StuddedChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Studded\StuddedGloves.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Studded\StuddedGorget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Armor\Studded\StuddedLegs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\BaseItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Body Parts\Head.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Body Parts\LeftArm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Body Parts\LeftLeg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Body Parts\RightArm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Body Parts\RightLeg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Body Parts\Torso.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Books\BaseBook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Books\BlueBook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Books\BrownBook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Books\RedBook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Books\TanBook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Clothing\BaseClothing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Clothing\Cloaks.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Clothing\Hats.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Clothing\MiddleTorso.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Clothing\OuterLegs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Clothing\OuterTorso.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Clothing\Pants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Clothing\Shirts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Clothing\Shoes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Clothing\Waist.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Ankhs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Chairs\Benchs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Chairs\Chairs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Chairs\Stools.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Chairs\Thrones.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Decorative\DecorativeShield.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Decorative\DecorativeWeapon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Decorative\PaintingPortraits.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Decorative\Tapestry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Doors\BaseDoor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Doors\Doors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Doors\HouseDoors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Doors\Portcullis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Doors\SecretDoors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Floors\Floors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Misc\BarrelParts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Misc\Easle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Misc\MeltedWax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Misc\MusicStand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Misc\Obelisk.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Misc\Statues.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Misc\Vase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Ruined\RuinedItemSingle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Signs\BaseSign.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Signs\LocalizedSign.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Signs\Sign.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Tables\Tables.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Tables\WritingTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Walls\BaseWall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Walls\DarkWoodWall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Walls\ThickGrayStoneWall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Walls\ThinBrickWall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Walls\ThinStoneWall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Construction\Walls\WhiteStoneWall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Containers\BaseTreasureChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Containers\Container.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Containers\FurnitureContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Containers\KeyRing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Containers\LockableContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Containers\MarkContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Containers\TrapableContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Containers\TreasureChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Deeds\BarkeepContract.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Deeds\ClothingBlessDeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Deeds\CommodityDeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Deeds\HairRestylingDeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Deeds\HoldayTreeDeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Deeds\NameChangeDeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Deeds\NewPlayerTicket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Facial\Beard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Facial\Hair.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Food\Beverage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Food\BeverageEmpty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Food\CookableFood.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Food\Cooking.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Food\Food.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Food\Fruits.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Food\Vegetables.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Backgammon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\BaseBoard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\BasePiece.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\CheckerBoard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\CheckersPieces.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Chessboard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\ChessPieces.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Dices.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Mahjong\MahjongDealerIndicator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Mahjong\MahjongDices.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Mahjong\MahjongEnums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Mahjong\MahjongGame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Mahjong\MahjongPacketHandlers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Mahjong\MahjongPieceDim.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Mahjong\MahjongPlayers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Mahjong\MahjongTile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Mahjong\MahjongTileTypeGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Mahjong\MahjongWallBreakIndicator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Games\Mahjong\Packets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Gems\Amber.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Gems\Amethyst.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Gems\Citrine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Gems\Diamond.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Gems\Emerald.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Gems\Ruby.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Gems\Sapphire.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Gems\StarSapphire.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Gems\Tourmaline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Guilds\GuildDeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Guilds\Guildstone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Guilds\GuildTeleporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Jewels\BaseJewel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Jewels\Beads.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Jewels\Bracelet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Jewels\Earrings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Jewels\Necklace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Jewels\Ring.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\BaseEquipableLight.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\BaseLight.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\Brazier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\BrazierTall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\Candelabra.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\CandelabraStand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\Candle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\CandleLarge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\CandleLong.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\CandleShort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\CandleSkull.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\DarkSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\HangingLantern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\HeatingStand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\LampPost1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\LampPost2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\LampPost3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\Lantern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\LightSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\Torch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\WallSconce.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Lights\WallTorch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Maps\BlankMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Maps\CityMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Maps\LocalMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Maps\MapItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Maps\PresetMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Maps\SeaChart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Maps\WorldMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\ArcaneGem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\BankCheck.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\BedRoll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Beeswax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Blocker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Blood.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Bola.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\BolaBall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\BulletinBoards.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\ClockworkAssembly.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\ComCrystal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Corpses\Corpse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Corpses\CorpseNameAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Corpses\DecayedCorpse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Corpses\Packets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\CrystalBall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\EffectController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\EffectItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\FlipableAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\GlassItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Gold.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\HairDye.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\HealItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\InteriorDecorator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Key.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\LOSBlocker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Moonstone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\MoonstoneGate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\OilCloth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\PlayerVendorDeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\PowerCrystal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\PublicMoongate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Rares.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\ResGate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Scales.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Static.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\SwarmOfFlies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Teleporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\TrashBarrel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\TrashChest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\TribalBerry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\TribalPaint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Misc\Waypoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\PlantsFlowers\Potted\EmptyPots.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\PlantsFlowers\Potted\PottedCactus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\PlantsFlowers\Potted\PottedPlants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\PlantsFlowers\Potted\PottedTrees.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Arrows\Arrow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Arrows\Bolt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Arrows\Feather.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Arrows\Shaft.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Blacksmithing\Ingots.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Blacksmithing\Ore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Blacksmithing\Scales.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Fishing\BigFish.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Fishing\Fish.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Fishing\MagicFish.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Masonry\Granite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\BagOfAllReagents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\BagOfNecroReagents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\BagOfReagents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\BaseReagent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\BatWing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\BlackPearl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\Bloodmoss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\DaemonBlood.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\Garlic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\Ginseng.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\GraveDust.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\MandrakeRoot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\Nightshade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\NoxCrystal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\PigIron.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\SpidersSilk.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Reagents\SulfurousAsh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Tailor\BoltOfCloth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Tailor\Bone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Tailor\Cloth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Tailor\Cotton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Tailor\Flax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Tailor\Hides.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Tailor\Leathers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Tailor\UncutCloth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Tailor\Wool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Resources\Tailor\YarnsAndThreads.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\Artifacts\Aegis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\Artifacts\ArcaneShield.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\BaseShield.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\BronzeShield.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\Buckler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\ChaosShield.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\HeaterShield.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\MetalKiteShield.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\MetalShield.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\OrderShield.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\WoodenKiteShield.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Shields\WoodenShield.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Blacksmith Items\Misc\AnvilForge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Blacksmith Items\Misc\LargeForge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Camping\Campfire.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Camping\Kindling.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Carpenter Items\Board.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Fishing\FishingPole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Fishing\Misc\MessageInABottle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Fishing\Misc\Sextant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Fishing\Misc\ShipwreckedItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Fishing\Misc\SOS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Fishing\Misc\SpecialFishingNet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Harvest Tools\BaseHarvestTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Harvest Tools\GargoylesPickaxe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Harvest Tools\ProspectorsTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Harvest Tools\Shovel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Harvest Tools\SturdyPickaxe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Harvest Tools\SturdyShovel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Lumberjack\Log.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\BookOfChivalry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Misc\BlankScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Misc\Bottle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Misc\Moongate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Misc\PotionKeg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Misc\RecallRune.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\NecromancerSpellbook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Agility Potions\AgilityPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Agility Potions\BaseAgilityPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Agility Potions\GreaterAgilityPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\BasePotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Cure Potions\BaseCurePotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Cure Potions\CurePotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Cure Potions\GreaterCurePotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Cure Potions\LesserCurePotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Explosion Potions\BaseExplosionPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Explosion Potions\ExplosionPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Explosion Potions\GreaterExplosionPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Explosion Potions\LesserExplosionPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Heal Potions\BaseHealPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Heal Potions\GreaterHealPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Heal Potions\HealPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Heal Potions\LesserHealPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\NightSight.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Poison Potions\BasePoisonPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Poison Potions\DeadlyPoisonPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Poison Potions\GreaterPoisonPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Poison Potions\LesserPoisonPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Poison Potions\PoisonPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Refresh Potions\BaseRefreshPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Refresh Potions\RefreshPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Refresh Potions\TotalRefreshPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Strength Potions\BaseStrengthPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Strength Potions\GreaterStrengthPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Potions\Strength Potions\StrengthPotion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Eighth Circle\EarthquakeScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Eighth Circle\EnergyVortexScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Eighth Circle\ResurrectionScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Eighth Circle\SummonAirElementalScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Eighth Circle\SummonDaemonScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Eighth Circle\SummonEarthElementalScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Eighth Circle\SummonFireElementalScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Eighth Circle\SummonWaterElementalScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fifth Circle\BladeSpiritsScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fifth Circle\DispelFieldScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fifth Circle\IncognitoScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fifth Circle\MagicReflectScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fifth Circle\MindBlastScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fifth Circle\ParalyzeScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fifth Circle\PoisonFieldScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fifth Circle\SummonCreatureScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\First Circle\ClumsyScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\First Circle\CreateFoodScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\First Circle\FeeblemindScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\First Circle\HealScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\First Circle\MagicArrowScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\First Circle\NightSightScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\First Circle\ReactiveArmorScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\First Circle\WeakenScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fourth Circle\ArchcureScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fourth Circle\ArchProtectionScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fourth Circle\CurseScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fourth Circle\FireFieldScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fourth Circle\GreaterHealScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fourth Circle\LightningScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fourth Circle\ManaDrainScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Fourth Circle\RecallScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\AnimateDeadScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\BloodOathScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\CorpseSkinScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\CurseWeaponScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\EvilOmenScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\HorrificBeastScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\LichFormScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\MindRotScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\PainSpikeScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\PoisonStrikeScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\StrangleScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\SummonFamiliarScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\VampiricEmbraceScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\VengefulSpiritScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\WitherScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Necromancy\WraithFormScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Second Circle\AgilityScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Second Circle\CunningScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Second Circle\CureScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Second Circle\HarmScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Second Circle\MagicTrapScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Second Circle\MagicUnTrapScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Second Circle\ProtectionScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Second Circle\StrengthScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Seventh Circle\ChainLightningScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Seventh Circle\EnergyFieldScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Seventh Circle\FlamestrikeScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Seventh Circle\GateTravelScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Seventh Circle\ManaVampireScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Seventh Circle\MassDispelScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Seventh Circle\MeteorStormScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Seventh Circle\PolymorphScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Sixth Circle\DispelScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Sixth Circle\EnergyBoltScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Sixth Circle\ExplosionScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Sixth Circle\InvisibilityScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Sixth Circle\MarkScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Sixth Circle\MassCurseScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Sixth Circle\ParalyzeFieldSpell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Sixth Circle\RevealScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\SpellScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Third Circle\BlessScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Third Circle\FireballScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Third Circle\MagicLockScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Third Circle\PoisonScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Third Circle\TelekinisisScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Third Circle\TeleportScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Third Circle\UnlockScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Scrolls\Third Circle\WallOfStoneScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Magical\Spellbook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Misc\Bandage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Musical Instruments\BaseInstrument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Musical Instruments\Drums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Musical Instruments\Harp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Musical Instruments\LapHarp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Musical Instruments\Lute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Musical Instruments\Tambourine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Musical Instruments\TambourineTassel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Specialized\GlassblowingBook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Specialized\MasonryBook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Specialized\Sand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Specialized\SandMiningBook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Specialized\StoneMiningBook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Dyetubs\BlackDyeTub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Dyetubs\BlazeDyeTub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Dyetubs\CustomHuePicker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Dyetubs\DyeTub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Dyetubs\FurnitureDyeTub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Dyetubs\LeatherDyeTub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Dyetubs\RewardBlackDyeTub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Dyetubs\RunebookDyeTub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Dyetubs\SpecialDyeTub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Dyetubs\StatuetteDyeTub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Misc\Dressform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Misc\Dyes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tailor Items\Misc\Scissors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Theif\DisguiseKit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Theif\LockPick.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tinkering\Axle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tinkering\AxleGears.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tinkering\ClockFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tinkering\ClockParts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tinkering\Clocks.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tinkering\Gears.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tinkering\Hinge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tinkering\SextantParts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tinkering\Springs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tinkering\Spyglass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tinkering\Utensils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\BaseRunicTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\BaseTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\DovetailSaw.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\DrawKnife.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\FletcherTools.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\FlourSifter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\Froe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\Hammer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\Inshave.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\JointingPlane.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\MalletAndChisel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\MapmakersPen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\MortarPestle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\MouldingPlane.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\Nails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\RollingPin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\RunicHammer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\RunicSewingKit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\Saw.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\Scorp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\ScribesPen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\SewingKit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\Skillet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\SmithHammer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\SmoothingPlane.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\TinkerTools.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Skill Items\Tools\Tongs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Special\Holiday\Christmas\HolidayTree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Special\MiniHouses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Special\MonsterStatuette.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Special\RewardCake.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Special\Special Scrolls\PowerScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Special\Special Scrolls\StatScroll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Stones\AlchemyStone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Stones\GamblingStone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Stones\GMStone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Stones\IngotStone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Stones\RegStone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Stones\ScribeStone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Stones\SmithStone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Stones\TailorStone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Suits\AdminRobe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Suits\BaseSuit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Suits\CounselorRobe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Suits\DeathShroud.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Suits\DupreSuit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Suits\GMRobe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Suits\LordBlackthorneSuit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Suits\LordBritishSuit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Suits\SeerRobe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\SupplyBags\AlchemyBag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\SupplyBags\BagOfIngots.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\SupplyBags\ScribeBag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\SupplyBags\SmithBag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\SupplyBags\TailorBag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Traps\BaseTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Traps\FireColumnTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Traps\FlameSpurtTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Traps\GasTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Traps\GiantSpikeTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Traps\MushroomTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Traps\SawTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Traps\SpikeTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Traps\StoneFaceTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\ArmorIgnore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\BleedAttack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\ConcussionBlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\CrushingBlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\Disarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\Dismount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\DoubleStrike.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\InfectiousStrike.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\MortalStrike.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\MovingShot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\ParalyzingBlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\ShadowStrike.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\WeaponAbility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Abilities\WhirlwindAttack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\AxeOfTheHeavens.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\BladeOfInsanity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\BladeOfTheRighteous.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\BoneCrusher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\BreathOfTheDead.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\Frostbringer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\LegacyOfTheDreadLord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\SerpentsFang.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\StaffOfTheMagi.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\TheBeserkersMaul.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\TheDragonSlayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\TheTaskmaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\TitansHammer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Artifacts\ZyronicClaw.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Axes\Axe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Axes\BaseAxe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Axes\BattleAxe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Axes\DoubleAxe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Axes\ExecutionersAxe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Axes\Hatchet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Axes\LargeBattleAxe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Axes\Pickaxe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Axes\TwoHandedAxe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Axes\WarAxe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\BaseMeleeWeapon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\BaseWeapon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Fists.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Knives\BaseKnife.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Knives\ButcherKnife.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Knives\Cleaver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Knives\Dagger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Knives\SkinningKnife.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Knives\ThrowingDagger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Maces\BaseBashing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Maces\Club.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Maces\FireworksWand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Maces\HammerPick.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Maces\Mace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Maces\MagicWand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Maces\Maul.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Maces\Scepter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Maces\WarHammer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Maces\WarMace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\PoleArms\Bardiche.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\PoleArms\BasePoleArm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\PoleArms\Halberd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\PoleArms\Scythe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\PracticeWeapons.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Ranged\BaseRanged.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Ranged\Bow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Ranged\CompositeBow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Ranged\Crossbow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Ranged\HeavyCrossbow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Ranged\JukaBow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Ranged\RepeatingCrossbow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SlayerEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SlayerGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SlayerName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SpearsAndForks\BaseSpear.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SpearsAndForks\BladedStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SpearsAndForks\DoubleBladedStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SpearsAndForks\Pike.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SpearsAndForks\Pitchfork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SpearsAndForks\ShortSpear.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SpearsAndForks\Spear.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SpearsAndForks\TribalSpear.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SpearsAndForks\WarFork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\SpellEffect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Staves\BaseStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Staves\BlackStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Staves\GnarledStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Staves\QuarterStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Staves\ShepherdsCrook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\BaseSword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\BoneHarvester.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\Broadsword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\CrescentBlade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\Cutlass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\Katana.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\Kryss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\Lance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\Longsword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\Scimitar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\ThinLongsword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\Swords\VikingSword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Items\Weapons\WeaponEnums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\AccountPrompt.cs" />
+    <Compile Include="Misc\Animations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\AOS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\AttackMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\AutoRestart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\AutoSave.cs" />
+    <Compile Include="Misc\Broadcasts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\CharacterCreation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Cleanup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\CrashGuard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\DataPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\DispellableAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\DispellableFieldAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\DoorGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\EasyUO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Email.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Fastwalk.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\FindByName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\FindRunes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\FoodDecay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Guild.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\HardwareInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\InhumanSpeech.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Keywords.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\LightCycle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\LoginStats.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Loot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\MapDefinitions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\MemHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\NameList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\NameVerification.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Notoriety.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\OreInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Paperdoll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Poison.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\ProfanityProtection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Profile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\RaceDefinitions.cs" />
+    <Compile Include="Misc\RegenRates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\RenameRequests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\ServerList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\ShrinkTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\SkillCheck.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\SocketOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Titles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\uoamVendors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\VendorGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\Weather.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\WeightOverloading.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\WelcomeTimer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Misc\ZLib.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Alligator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\AnimalTrainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\BaseMount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\BigPig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\BlackBear.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\BrownBear.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Bull.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Cat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Chicken.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Cougar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Cow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Crow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\DireWolf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Doe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Dog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Dolphin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Eagle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Ethereals.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\ForestBird.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\GiantRat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Goat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Gorilla.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\GreatHart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\GreyWolf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\GrizzlyBear.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\HellHound.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Horse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\JackRabbit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Llama.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Magpie.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Mongbat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\MountainGoat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\PackHorse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\PackLlama.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Panther.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Pig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\PolarBear.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Rabbit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Raven.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\SewerRat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Sheep.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\SilverSerpent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\SmallSnake.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\SnowLeopard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\TimberWolf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\TropicalBird.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\Walrus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Animals\WhiteWolf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Guards\BaseGuard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Guards\BaseShieldGuard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Guards\ChaosGuard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Guards\OrderGuard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Guards\WarriorGuard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Actor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Artist.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\BaseEscortable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\BaseHire.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Beggar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\BrideGroom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Brigand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\EscortableMage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\EvilMage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\EvilMageBoss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\EvilWanderingHealer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\FemaleHealerEscortTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Fighter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Gambler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\HarborMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Jailor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Judge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\MageNonShopkeeper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\MaginciaCouncilMember.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\MaginciaServant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\MaleHealerEscortTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Mapmaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Mayor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Mercenary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Messenger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Miller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Miner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Monk.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Noble.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\OclloPriest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\OclloRunner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Paladin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Peasant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Pirate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Prisoner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Sailor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Sculpter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\SeekerOfAdventure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Thief.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\TownCrier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Alchemist.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\AnimalBuy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Architecht.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Armorer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Baker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Banker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Bard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\BaseVendor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Beekeeper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\BeverageBuy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Blacksmith.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Bowyer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Butcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Carpenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Cobbler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Cook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\EvilHealer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Farmer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Fisherman.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\FurTrader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\GenericBuy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\GenericSell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\BardGuildMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\BaseGuildmaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\BlacksmithGuildmaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\FishingGuildMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\HealerGuildMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\MageGuildMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\MerchantGuildMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\MinerGuildMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\RangerGuildMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\TailorGuildmaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\ThiefGuildMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\TinkerGuildMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Guildmasters\WarriorGuildMaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Healer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Herbalist.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Innkeeper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Jeweler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Mage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Minter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\OclloCashual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\PlayerVendor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\PresetMapBuy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Provisioner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Rancher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Ranger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Scribe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Shepherd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Shipwright.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Armor\SBChainmailArmor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Armor\SBHelmetArmor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Armor\SBLeatherArmor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Armor\SBMetalShields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Armor\SBPlateArmor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Armor\SBRingmailArmor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Armor\SBStuddedArmor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Armor\SBWoodenShields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBAlchemist.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBAnimalTrainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBBaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBBanker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBBard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBBarkeeper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBBeekeeper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBBowyer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBButcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBCarpenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBCobbler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBCook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBFarmer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBFisherman.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBFortuneTeller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBFurtrader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBGlassblower.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBHairStylist.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBHealer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBHerbalist.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBHolyMage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBHouseDeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBInnKeeper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBJewel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBKeeperOfChivalry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBLeatherWorker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBMage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBMapmaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBPlayerBarkeeper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBProvisioner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBRancher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBRealEstateBroker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBScribe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBShipwright.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBSmithTools.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBStoneCrafter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBTailor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBTanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBTavernKeeper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBTinker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBVagabond.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBVeterinarian.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBWaiter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\SBWeaver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Weapons\SBAxeWeapon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Weapons\SBKnifeWeapon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Weapons\SBMaceWeapon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Weapons\SBPoleArmWeapon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Weapons\SBRangedWeapon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Weapons\SBSpearForkWeapon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Weapons\SBStavesWeapon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\ShopLists\Weapons\SBSwordWeapon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Tailor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Tanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Tavernkeeper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Tinker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\VeggieSeller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Veterinarian.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Weaponsmith.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Vendors\Weaver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Waiter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Waitress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\WanderingHealer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\Warrior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Humans\WeaponsTrainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\LootPack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\AirElemental.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\BladeSpirit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\BloodElemental.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Corpser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Daemon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\DaemonBoss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Dragon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\DragonBoss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Drakes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\EarthElemental.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\EasyMongbat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\EnergyVortex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Ettin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\FireElemental.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Gargoyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Gazer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\GazerBoss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Ghost.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\GiantScorpion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\GiantSerpent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\GiantSpider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Gypsy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Harpy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Headless.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Liche.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\LichLord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Lizardman.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Ogre.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\OgreLord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Orc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\OrcCaptain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\OrcLord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\OrcMage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\PoisonElemental.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\RatMan.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Reaper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\SeaSerpent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Skeleton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\SkeletonKnight.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\SkeletonMage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Slimes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Troll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\WaterElemental.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Wisp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\Monsters\Zombie.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mobiles\PlayerMobile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\BaseHouse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\BaseBoat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\BaseBoatDeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\BaseDockedBoat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\ConfirmDryDockGump.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\Hold.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\LargeBoat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\LargeDragonBoat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\MediumBoat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\MediumDragonBoat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\Plank.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\RenameBoatPrompt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\SmallBoat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\SmallDragonBoat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\Strandedness.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Boats\TillerMan.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Camps\BaseCamp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Camps\OrcCamp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Deeds.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\HousePlacement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\HousePlacementTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\Houses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Multis\HouseSign.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regions\BaseRegion.cs" />
+    <Compile Include="Regions\DungeonRegion.cs" />
+    <Compile Include="Regions\GreenAcres.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regions\GuardedRegion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regions\HouseRegion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regions\Jail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regions\NoHousingRegion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regions\Spawning\SpawnDefinition.cs" />
+    <Compile Include="Regions\Spawning\SpawnEntry.cs" />
+    <Compile Include="Regions\Spawning\SpawnPersistence.cs" />
+    <Compile Include="Regions\TownRegion.cs" />
+    <Compile Include="Skills\Anatomy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\AnimalLore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\AnimalTaming.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\ArmsLore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Begging.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Cartography.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\DetectHidden.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Discordance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\EvalInt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\ForensicEval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Hiding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Inscribe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\ItemIdentification.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Meditation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Peacemaking.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Poisoning.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Provocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\RemoveTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Snooping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\SpiritSpeak.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Stealing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Stealth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\TasteID.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Skills\Tracking.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Special\AbyssImport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Special\Christmas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Special\DarkParchment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Special\QuestChest1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Special\QuestNPC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Special\QuestOrcs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Special\Reindeer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Special\Rewards.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Special\Santa.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Special\StrongBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Special\TeleHideAI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Base\DisturbType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Base\Spell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Base\SpellCircle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Base\SpellHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Base\SpellInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Base\SpellRegistry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Base\SpellState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Eighth\AirElemental.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Eighth\EarthElemental.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Eighth\Earthquake.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Eighth\EnergyVortex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Eighth\FireElemental.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Eighth\Resurrection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Eighth\SummonDaemon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Eighth\WaterElemental.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fifth\BladeSpirits.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fifth\DispelField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fifth\Incognito.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fifth\MagicReflect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fifth\MindBlast.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fifth\Paralyze.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fifth\PoisonField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fifth\SummonCreature.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\First\Clumsy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\First\CreateFood.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\First\Feeblemind.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\First\Heal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\First\MagicArrow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\First\NightSight.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\First\ReactiveArmor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\First\Weaken.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fourth\ArchCure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fourth\ArchProtection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fourth\Curse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fourth\FireField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fourth\GreaterHeal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fourth\Lightning.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fourth\ManaDrain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Fourth\Recall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Initializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Reagent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Second\Agility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Second\Cunning.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Second\Cure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Second\Harm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Second\MagicTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Second\Protection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Second\RemoveTrap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Second\Strength.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Seventh\ChainLightning.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Seventh\EnergyField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Seventh\FlameStrike.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Seventh\GateTravel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Seventh\ManaVampire.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Seventh\MassDispel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Seventh\MeteorSwarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Seventh\Polymorph.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Sixth\Dispel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Sixth\EnergyBolt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Sixth\Explosion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Sixth\Invisibility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Sixth\Mark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Sixth\MassCurse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Sixth\ParalyzeField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Sixth\Reveal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Third\Bless.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Third\Fireball.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Third\MagicLock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Third\Poison.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Third\Telekinesis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Third\Teleport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Third\Unlock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\Third\WallOfStone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spells\UnsummonTimer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Targets\BladedItemTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Targets\MoveTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Targets\PickMoveTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="Items\Armor\.#BaseArmor.cs.1.6" />
+    <None Include="Items\Skill Items\Magical\Potions\Explosion Potions\.#BaseExplosionPotion.cs.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

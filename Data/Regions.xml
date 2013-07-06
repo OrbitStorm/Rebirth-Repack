@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ServerRegions>
+	<Facet name="Felucca">
+		<region type="GuardedRegion" priority="50" name="Moongates">
+			<!-- britain -->
+			<rect x="1330" y="1991" width="13" height="13" />
+			<!-- jhelom -->
+			<rect x="1494" y="3767" width="12" height="11" />
+			<!-- minoc -->
+			<rect x="2694" y="685" width="15" height="16" />
+			<!-- trinsic -->
+			<rect x="1823" y="2943" width="11" height="11" />
+			<!-- yew -->
+			<rect x="761" y="741" width="19" height="21" />
+			<!-- skara brae -->
+			<rect x="638" y="2062" width="12" height="11" />
+			<!-- moonglow -->
+			<rect x="4459" y="1276" width="16" height="16" />
+			<!-- magincia -->
+			<rect x="3554" y="2132" width="18" height="18" />
+		</region>
+		
+		<region type="TownRegion" priority="50" name="Cove">
+			<rect x="2200" y="1110" width="50" height="50" />
+			<rect x="2200" y="1160" width="86" height="86" />
+			<go location="(2275,1210,0)" />
+			<music name="Cove" />
+		</region>
+		<region type="TownRegion" priority="50" name="Britain">
+			<rect x="1416" y="1498" width="324" height="279" zmin="-10" />
+			<rect x="1500" y="1408" width="46" height="90" />
+			<rect x="1416" y="1777" width="324" height="60" />
+			<rect x="1385" y="1538" width="31" height="239" zmin="-10" />
+			<!-- british castle: -->
+			<rect x="1295" y="1559" width="116" height="140" />
+			<!-- farmlands: 
+			<rect x="1385" y="1777" width="31" height="130" />
+			<rect x="1093" y="1538" width="292" height="369" /> 
+			-->
+			<inn x="1492" y="1602" width="8" height="19" />
+			<inn x="1500" y="1610" width="8" height="16" />
+			<inn x="1576" y="1584" width="24" height="16" />
+			<inn x="1456" y="1512" width="16" height="16" />
+			<inn x="1472" y="1512" width="8" height="8" />
+			<inn x="1486" y="1684" width="8" height="8" />
+			<inn x="1494" y="1676" width="8" height="24" />
+			<inn x="1424" y="1712" width="8" height="24" />
+			<inn x="1432" y="1712" width="8" height="12" />
+			<inn x="1608" y="1584" width="24" height="8" />
+			<inn x="1616" y="1576" width="8" height="8" />
+			<inn x="1544" y="1760" width="16" height="16" />
+			<inn x="1560" y="1760" width="8" height="8" />
+			<go location="(1495,1629,10)" />
+			<music name="Britain1" />
+			<zrange min="0" />
+		</region>
+		<region priority="50" name="Britain Graveyard">
+			<rect x="1333" y="1441" width="84" height="82" />
+			<go location="(1384,1492,10)" />
+		</region>
+		<region type="TownRegion" priority="50" name="Jhelom">
+			<rect x="1303" y="3670" width="189" height="225" />
+			<rect x="1338" y="3895" width="74" height="28" />
+			<rect x="1383" y="3951" width="109" height="94" />
+			<inn x="1352" y="3800" width="16" height="32" />
+			<inn x="1368" y="3808" width="8" height="16" />
+			<inn x="1432" y="3768" width="32" height="8" />
+			<inn x="1440" y="3776" width="24" height="8" />
+			<go location="(1383,3815,0)" />
+			<music name="Jhelom" />
+			<zrange min="-20" />
+		</region>
+		<region priority="49" name="Jhelom Islands">
+			<rect x="1111" y="3567" width="33" height="21" />
+			<rect x="1078" y="3588" width="124" height="121" />
+			<rect x="1224" y="3592" width="309" height="473" />
+			<go location="(1383,3815,0)" />
+			<music name="Jhelom" />
+		</region>
+		<region type="TownRegion" priority="50" name="Minoc">
+			<rect x="2411" y="366" width="135" height="241" />
+			<!-- mines: <rect x="2548" y="495" width="72" height="55" /> -->
+			<rect x="2564" y="585" width="3" height="42" />
+			<rect x="2567" y="585" width="61" height="61" />
+			<rect x="2499" y="627" width="68" height="63" />
+			<inn x="2457" y="397" width="40" height="8" />
+			<inn x="2465" y="405" width="8" height="8" />
+			<inn x="2481" y="405" width="8" height="8" />
+			<go location="(2466,544,0)" />
+			<music name="Minoc" />
+		</region>
+		<region type="TownRegion" priority="50" name="Ocllo">
+			<rect x="3587" y="2456" width="119" height="99" />
+			<rect x="3706" y="2460" width="2" height="95" />
+			<rect x="3587" y="2555" width="106" height="73" />
+			<rect x="3590" y="2628" width="103" height="58" />
+			<rect x="3693" y="2555" width="61" height="144" />
+			<rect x="3754" y="2558" width="7" height="141" />
+			<rect x="3761" y="2555" width="7" height="144" zmax="50" />
+			<rect x="3695" y="2699" width="66" height="13" />
+			<inn x="3664" y="2608" width="16" height="16" />
+			<inn x="3664" y="2640" width="8" height="16" />
+			<inn x="3672" y="2648" width="8" height="8" />
+			<go location="(3650,2519,0)" />
+			<music name="Ocllo" />
+		</region>
+		<region type="TownRegion" priority="50" name="Trinsic">
+			<rect x="1856" y="2636" width="75" height="28" />
+			<rect x="1816" y="2664" width="283" height="231" />
+			<rect x="2099" y="2782" width="18" height="25" />
+			<rect x="1970" y="2895" width="47" height="32" />
+			<rect x="1796" y="2696" width="20" height="67" zmin="0" />
+			<rect x="1800" y="2796" width="16" height="52" zmin="0" />
+			<inn x="1834" y="2728" width="22" height="16" />
+			<inn x="2024" y="2784" width="16" height="20" />
+			<inn x="2026" y="2804" width="14" height="2" />
+			<inn x="2024" y="2806" width="16" height="7" />
+			<inn x="1923" y="2786" width="12" height="22" />
+			<inn x="1935" y="2786" width="7" height="14" />
+			<go location="(1867,2780,0)" />
+			<music name="Trinsic" />
+		</region>
+		<region type="TownRegion" priority="50" name="Vesper">
+			<rect x="2893" y="598" width="121" height="50" />
+			<rect x="2816" y="648" width="249" height="365" zmin="-10"/>
+			<rect x="2734" y="944" width="82" height="4" />
+			<rect x="2728" y="948" width="88" height="53" />
+			
+			<inn x="2952" y="864" width="16" height="32" />
+			<inn x="2968" y="872" width="8" height="16" />
+			<inn x="2776" y="952" width="16" height="32" />
+			<inn x="2768" y="960" width="8" height="16" />
+			<inn x="2892" y="901" width="16" height="19" />
+			<inn x="2908" y="904" width="8" height="8" />
+			<go location="(2899,676,0)" />
+			<music name="Vesper" />
+		</region>
+		<region type="TownRegion" priority="50" name="Yew">
+			<rect x="92" y="656" width="349" height="225" />
+			<rect x="441" y="746" width="216" height="135" />
+			<rect x="258" y="881" width="399" height="380" />
+			<rect x="657" y="922" width="42" height="307" />
+			<rect x="657" y="807" width="17" height="27" />
+			<rect x="718" y="874" width="38" height="22" />
+			<inn x="600" y="808" width="24" height="24" />
+			<go location="(546,992,0)" />
+			<music name="Yew" />
+			<zrange min="0" max="39" />
+		</region>
+		<region type="TownRegion" priority="50" name="Serpent's Hold">
+			<rect x="2868" y="3324" width="205" height="195" />
+			<inn x="2960" y="3400" width="16" height="16" />
+			<inn x="2968" y="3416" width="8" height="16" />
+			<inn x="3008" y="3450" width="14" height="14" />
+			<go location="(3010,3371,15)" />
+			<music name="Serpents" />
+			<zrange min="0" />
+		</region>
+		<region type="TownRegion" priority="50" name="Skara Brae">
+			<rect x="538" y="2107" width="150" height="190" />
+			<inn x="600" y="2232" width="16" height="24" />
+			<inn x="592" y="2240" width="8" height="16" />
+			<inn x="616" y="2240" width="8" height="16" />
+			<inn x="552" y="2168" width="16" height="24" />
+			<inn x="568" y="2168" width="8" height="8" />
+			<go location="(632,2233,0)" />
+			<music name="Skarabra" />
+		</region>
+		<region type="TownRegion" priority="50" name="Nujel'm">
+			<rect x="3475" y="1000" width="360" height="435" />
+			<inn x="3736" y="1184" width="16" height="23" />
+			<inn x="3728" y="1192" width="8" height="15" />
+			<inn x="3728" y="1288" width="23" height="15" />
+			<inn x="3728" y="1303" width="16" height="9" />
+			<inn x="3728" y="1312" width="12" height="8" />
+			<inn x="3728" y="1320" width="16" height="23" />
+			<inn x="3744" y="1328" width="7" height="15" />
+			<inn x="3760" y="1216" width="12" height="24" />
+			<inn x="3772" y="1220" width="4" height="16" />
+			<inn x="3776" y="1224" width="8" height="8" />
+			<inn x="3728" y="1248" width="16" height="24" />
+			<inn x="3744" y="1264" width="8" height="8" />
+			<inn x="3744" y="1248" width="8" height="8" />
+			<go location="(3732,1279,0)" />
+			<music name="Nujelm" />
+			<zrange min="0" />
+		</region>
+		<region type="TownRegion" priority="50" name="Moonglow">
+			<rect x="4535" y="844" width="20" height="3" />
+			<rect x="4530" y="847" width="31" height="61" />
+			<rect x="4521" y="914" width="56" height="49" />
+			<rect x="4278" y="915" width="54" height="19" />
+			<rect x="4283" y="944" width="53" height="73" />
+			<rect x="4377" y="1015" width="59" height="37" zmin="-10" />
+			<rect x="4367" y="1050" width="142" height="145" />
+			<rect x="4539" y="1036" width="27" height="18" />
+			<rect x="4517" y="1053" width="23" height="22" />
+			<rect x="4389" y="1198" width="47" height="39" />
+			<rect x="4466" y="1211" width="32" height="25" />
+			<rect x="4700" y="1108" width="17" height="18" />
+			<rect x="4656" y="1127" width="26" height="13" />
+			<rect x="4678" y="1162" width="25" height="25" />
+			<rect x="4613" y="1196" width="23" height="22" />
+			<rect x="4646" y="1212" width="14" height="17" />
+			<rect x="4677" y="1214" width="26" height="22" />
+			<rect x="4622" y="1316" width="22" height="24" />
+			<rect x="4487" y="1353" width="59" height="21" />
+			<rect x="4477" y="1374" width="69" height="35" />
+			<rect x="4659" y="1387" width="40" height="40" />
+			<rect x="4549" y="1482" width="29" height="27" />
+			<rect x="4405" y="1451" width="23" height="23" />
+			<rect x="4483" y="1468" width="21" height="13" />
+			<inn x="4384" y="1152" width="8" height="24" />
+			<inn x="4392" y="1160" width="16" height="8" />
+			<inn x="4400" y="1152" width="8" height="8" />
+			<inn x="4480" y="1056" width="8" height="16" />
+			<inn x="4488" y="1060" width="4" height="8" />
+			<inn x="4476" y="1060" width="4" height="8" />
+			<go location="(4442,1172,0)" />
+			<music name="Moonglow" />
+			<zrange min="0" />
+		</region>
+		<region type="TownRegion" priority="50" name="Magincia">
+			<rect x="3653" y="2046" width="27" height="48" />
+			<rect x="3752" y="2046" width="52" height="48" />
+			<rect x="3680" y="2045" width="72" height="49" />
+			<rect x="3652" y="2094" width="160" height="180" />
+			<rect x="3649" y="2256" width="54" height="47" />
+			<inn x="3680" y="2152" width="24" height="8" />
+			<inn x="3720" y="2216" width="16" height="16" />
+			<go location="(3714,2220,20)" />
+			<music name="Magincia" />
+		</region>
+		<region type="TownRegion" priority="50" name="Buccaneer's Den">
+			<!-- <rect x="2612" y="2057" width="164" height="210" />
+			<rect x="2604" y="2065" width="8" height="189" zmin="0" /> -->
+			<rect x="2587" y="2037" width="275" height="275" />
+			<inn x="2712" y="2080" width="16" height="16" />
+			<inn x="2712" y="2096" width="8" height="8" />
+			<inn x="2664" y="2232" width="24" height="8" />
+			<inn x="2672" y="2240" width="16" height="8" />
+			<go location="(2706,2163,0)" />
+			<music name="Bucsden" />
+		</region>
+		
+		
+		<region type="TownRegion" priority="50" name="Wind">
+			<rect x="5294" y="19" width="72" height="120" />
+			<rect x="5132" y="58" width="81" height="68" />
+			<rect x="5197" y="126" width="55" height="78" />
+			<rect x="5132" y="3" width="70" height="55" />
+			<rect x="5252" y="112" width="42" height="58" />
+			<rect x="5213" y="98" width="39" height="28" />
+			<rect x="5279" y="57" width="15" height="55" />
+			<rect x="5252" y="170" width="32" height="8" />
+			<rect x="5286" y="25" width="8" height="32" />
+			<rect x="5252" y="178" width="20" height="5" />
+			<rect x="5252" y="183" width="10" height="10" />
+			<inn x="5159" y="15" width="25" height="9" />
+			<inn x="5159" y="24" width="9" height="16" />
+			<inn x="5175" y="24" width="9" height="8" />
+			<inn x="5212" y="159" width="9" height="24" />
+			<inn x="5221" y="171" width="7" height="12" />
+			<inn x="5206" y="164" width="6" height="15" />
+			<inn x="5303" y="28" width="16" height="14" />
+			<go location="(5223,190,5)" />
+			<music name="Wind" />
+		</region>
+		
+		
+		<!-- Dungeons -->
+		
+		<region type="DungeonRegion" priority="47" name="Dungeons Level 1">
+			<music name="Dungeon9" />
+			
+			<!-- Covetous Level 1 -->
+			<rect x1="5380" y1="1848" x2="5421" y2="1963" />
+			<rect x1="5421" y1="1848" x2="5510" y2="1943" />
+			
+			<!-- Deceit Level 1 -->
+			<rect x1="5135" y1="526" x2="5235" y2="642" />
+			
+			<!-- Despise Entryway -->
+			<rect x1="5566" y1="622" x2="5591" y2="643" />
+			<!-- Despise Level 1 -->
+			<rect x1="5378" y1="517" x2="5515" y2="637" />
+			
+			<!-- Destard Level 1 -->
+			<rect x1="5121" y1="771" x2="5366" y2="1025" />
+			
+			<!-- Hythloth Level 1 -->
+			<rect x1="5902" y1="15" x2="6001" y2="114" />
+			
+			<!-- Shame Level 1 -->
+			<rect x1="5379" y1="5" x2="5498" y2="131" />
+			
+			<!-- Wrong Level 1 -->
+			<rect x1="5773" y1="513" x2="5884" y2="636" />
+		</region>
+		<region type="DungeonRegion" priority="48" name="Dungeons Level 2">
+			<music name="Dungeon9" />
+			
+			<!-- Covetous Level 2 -->
+			<rect x1="5425" y1="1948" x2="5624" y2="2044" />
+			<rect x1="5384" y1="1964" x2="5425" y2="2030" />
+			
+			<!-- Despise Level 2 -->
+			<rect x1="5378" y1="644" x2="5530" y2="767" />
+			
+			<!-- Destard Level 2 -->
+			<rect x1="5123" y1="794" x2="5186" y2="885" />
+			
+			<!-- Hythloth Level 2 -->
+			<rect x1="5911" y1="143" x2="6002" y2="243" />
+			
+			<!-- Shame Level 2 -->
+			<rect x1="5507" y1="3" x2="5632" y2="126" />
+			
+			<!-- Wrong Level 2 -->
+			<rect x1="5641" y1="516" x2="5742" y2="586" />
+			
+			<!-- Deceit Level 2 -->
+			<rect x1="5275" y1="525" x2="5355" y2="634" />
+		</region>
+		<region type="DungeonRegion" priority="49" name="Dungeons Level 3">
+			<music name="Dungeon9" />
+			
+			<!-- Covetous Level 3 -->
+			<rect x1="5532" y1="1821" x2="5630" y2="1930" />
+			
+			<!-- Deceit Level 3 -->
+			<rect x1="5124" y1="644" x2="5234" y2="769" />
+			
+			<!-- Despise Level 3 -->
+			<rect x1="5381" y1="774" x2="5627" y2="1020" />
+			
+			<!-- Destard Level 3 -->
+			<rect x1="5125" y1="954" x2="5154" y2="1020" />
+			<rect x1="5153" y1="982" x2="5198" y2="1020" />
+			
+			<!-- Hythloth Level 3 -->
+			<rect x1="6021" y1="141" x2="6130" y2="235" />
+			
+			<!-- Shame Level 3 -->
+			<rect x1="5379" y1="133" x2="5626" y2="261" />
+			
+			<!-- Wrong Level 3 -->
+			<rect x1="5685" y1="623" x2="5722" y2="668" />
+		</region>
+		<region type="DungeonRegion" priority="50" name="Dungeons Lower Levels">
+			<music name="Dungeon9" />
+			
+			<!-- Covetous Torture Room -->
+			<rect x1="5498" y1="1797" x2="5565" y2="1821" />
+			<!-- Covetous Lake -->
+			<rect x1="5400" y1="1794" x2="5489" y2="1834" />
+			
+			<!-- Deceit Level 4 -->
+			<rect x1="5252" y1="644" x2="5339" y2="765" />
+			
+			<!-- Hythloth Level 4 -->
+			<rect x1="6047" y1="28" x2="6122" y2="107" />
+			
+			<!-- Shame Level 4 Entryway -->
+			<rect x1="5495" y1="157" x2="5520" y2="194" />
+			<!-- Shame Level 4 -->
+			<rect x1="5638" y1="2" x2="5889" y2="122" />
+			
+			<!-- Wrong Level 4 -->
+			<rect x1="5665" y1="785" x2="5873" y2="1017" />
+		</region>
+		<!-- end dungeons -->
+		
+		<region type="Jail" priority="50" name="Jail">
+			<rect x="5271" y="1159" width="41" height="33" />
+			<go location="(5275,1163,0)" />
+		</region>
+		<region type="GreenAcres" priority="1" name="Green Acres">
+			<rect x="5376" y="512" width="767" height="767" />
+			<go location="(5445,1153,0)" />
+		</region>
+
+		<region priority="50" name="Terathan Keep">
+			<rect x="5404" y="3099" width="77" height="68" />
+			<rect x="5120" y="1530" width="254" height="258" />
+			<go location="(5451,3143,-60)" />
+			<music name="Dungeon9" />
+		</region>
+		<region type="DungeonRegion" priority="50" name="Fire">
+			<rect x="5635" y="1285" width="245" height="235" />
+			<go location="(5760,2908,15)" />
+			<music name="Dungeon9" />
+		</region>
+		<region type="DungeonRegion" priority="50" name="Ice">
+			<rect x="5668" y="130" width="220" height="138" />
+			<rect x="5800" y="319" width="63" height="65" />
+			<rect x="5654" y="300" width="54" height="40" />
+			<go location="(5210,2322,30)" />
+			<music name="Dungeon9" />
+		</region>
+		
+		<region type="TownRegion" priority="50" name="Delucia">
+			<rect x="5123" y="3942" width="192" height="122" />
+			<rect x="5147" y="4064" width="125" height="20" />
+			<rect x="5235" y="3930" width="80" height="12" />
+			<inn x="5194" y="4053" width="10" height="20" />
+			<go location="(5228,3978,37)" />
+		</region>
+		<region type="TownRegion" priority="50" name="Papua">
+			<rect x="5639" y="3095" width="192" height="223" />
+			<rect x="5831" y="3237" width="20" height="30" />
+			<inn x="5757" y="3150" width="24" height="24" />
+			<go location="(5769,3176,0)" />
+		</region>
+		
+		<!-- these regions are 'no housing' -->
+		<region type="NoHousingRegion" priority="50" name="Wrong Entrance">
+			<rect x="1939" y="215" width="134" height="137" />
+			<go location="(2043,236,13)" />
+			<music name="Mountn_a" />
+		</region>
+		<region type="NoHousingRegion" priority="50" name="Covetous Entrance">
+			<rect x="2433" y="846" width="128" height="128" />
+			<go location="(2499,918,0)" />
+			<music name="Vesper" />
+		</region>
+		<region type="NoHousingRegion" priority="50" name="Despise Passage">
+			<rect x="1338" y="1060" width="51" height="62" />
+			<rect x="1354" y="1122" width="42" height="121" />
+			<rect x="1349" y="1122" width="5" height="102" />
+			<go location="(1380,1114,0)" />
+		</region>
+		<region type="NoHousingRegion" priority="50" name="Despise Entrance">
+			<rect x="1290" y="1045" width="30" height="55" />
+			<go location="(1380,1114,0)" />
+		</region>
+	</Facet>
+</ServerRegions>

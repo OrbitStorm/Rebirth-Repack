@@ -1,0 +1,431 @@
+Index: Item.cs
+===================================================================
+--- Item.cs	(revision 728)
++++ Item.cs	(working copy)
+@@ -2687,16 +2687,21 @@
+ 			return 18;
+ 		}
+ 
+-		public void SendInfoTo( NetState state ) {
++		public virtual void SendInfoTo( NetState state ) { // Zippy made virtual (for 1.0.1 compat) 11 June 2011
+ 			SendInfoTo( state, ObjectPropertyList.Enabled );
+ 		}
+ 
+ 		public virtual void SendInfoTo( NetState state, bool sendOplPacket ) {
+-			state.Send( GetWorldPacketFor( state ) );
++            Packet p = GetWorldPacketFor(state);
++            if (p != null)
++            {
++                state.Send( p );
+ 
+-			if ( sendOplPacket ) {
+-				state.Send( OPLPacket );
+-			}
++                if (sendOplPacket)
++                {
++                    state.Send(OPLPacket);
++                }
++            }
+ 		}
+ 
+ 		protected virtual Packet GetWorldPacketFor( NetState state ) {
+@@ -3423,7 +3428,39 @@
+ 				OnItemRemoved( item );
+ 			}
+ 		}
++        // BEGIN 1.0.1 code -- Zippy 11 June 2011
++        public virtual Item Dupe(int amount)
++        {
++            return this.Dupe(new Item(), amount);
++        }
+ 
++        public virtual Item Dupe(Item item, int amount)
++        {
++            item.Visible = this.Visible;
++            item.Movable = this.Movable;
++            item.LootType = this.LootType;
++            item.Direction = this.Direction;
++            item.Hue = this.Hue;
++            item.ItemID = this.ItemID;
++            item.Location = this.Location;
++            item.Layer = this.Layer;
++            item.Name = this.Name;
++            item.Weight = this.Weight;
++            item.Amount = amount;
++            item.Map = this.Map;
++            if (this.Parent is Mobile)
++            {
++                ((Mobile)this.Parent).AddItem(item);
++            }
++            else if (this.Parent is Item)
++            {
++                ((Item)this.Parent).AddItem(item);
++            }
++            item.Delta(ItemDelta.Update);
++            return item;
++        }
++        // END 1.0.1 code -- Zippy 11 June 2011
++
+ 		public virtual void OnAfterDuped( Item newItem )
+ 		{
+ 		}
+@@ -3635,7 +3672,7 @@
+ 		}
+ 
+ 		[CommandProperty( AccessLevel.GameMaster )]
+-		public string Name
++		public virtual string Name // Zippy made virtual (for 1.0.1 compat) 11 June 2011
+ 		{
+ 			get
+ 			{
+Index: Main.cs
+===================================================================
+--- Main.cs	(revision 728)
++++ Main.cs	(working copy)
+@@ -37,6 +37,7 @@
+ using Server.Gumps;
+ using Server.Network;
+ using System.Runtime;
++using Ultima;
+ 
+ namespace Server
+ {
+@@ -58,6 +59,7 @@
+ 		private static bool m_HaltOnWarning;
+ 		private static bool m_VBdotNET;
+ 		private static MultiTextWriter m_MultiConOut;
++        private static Ultima.StringList m_CliLoc;
+ 
+ 		private static bool m_Profiling;
+ 		private static DateTime m_ProfileStart;
+@@ -71,6 +73,18 @@
+ 			set { m_MessagePump = value; }
+ 		}
+ 
++        public static Ultima.StringList CliLoc
++        { 
++            get 
++            {
++                return m_CliLoc;
++            }
++            set
++            {
++                m_CliLoc = value;
++            }
++        }
++
+ 		public static Slice Slice;
+ 
+ 		public static bool Profiling
+Index: Network/Packets.cs
+===================================================================
+--- Network/Packets.cs	(revision 728)
++++ Network/Packets.cs	(working copy)
+@@ -2084,7 +2084,7 @@
+ 			return p;
+ 		}
+ 
+-		public MessageLocalized( Serial serial, int graphic, MessageType type, int hue, int font, int number, string name, string args ) : base( 0xC1 )
++		public MessageLocalized( Serial serial, int graphic, MessageType type, int hue, int font, int number, string name, string args ) : base( 0x1C )
+ 		{
+ 			if ( name == null ) name = "";
+ 			if ( args == null ) args = "";
+@@ -2092,16 +2092,16 @@
+ 			if ( hue == 0 )
+ 				hue = 0x3B2;
+ 
+-			this.EnsureCapacity( 50 + (args.Length * 2) );
++            string text = Core.CliLoc.SplitFormat(number, args);
++			this.EnsureCapacity( 45 + text.Length );
+ 
+ 			m_Stream.Write( (int) serial );
+ 			m_Stream.Write( (short) graphic );
+ 			m_Stream.Write( (byte) type );
+ 			m_Stream.Write( (short) hue );
+ 			m_Stream.Write( (short) font );
+-			m_Stream.Write( (int) number );
+ 			m_Stream.WriteAsciiFixed( name, 30 );
+-			m_Stream.WriteLittleUniNull( args );
++            m_Stream.WriteAsciiNull( text );
+ 		}
+ 	}
+ 
+@@ -3445,8 +3445,8 @@
+ 
+ 	public sealed class UnicodeMessage : Packet
+ 	{
+-		public UnicodeMessage( Serial serial, int graphic, MessageType type, int hue, int font, string lang, string name, string text ) : base( 0xAE )
+-		{
++        public UnicodeMessage( Serial serial, int graphic, MessageType type, int hue, int font, string lang, string name, string text ) : base( 0x1C )
++        {
+ 			if ( string.IsNullOrEmpty( lang ) ) lang = "ENU";
+ 			if ( name == null ) name = "";
+ 			if ( text == null ) text = "";
+@@ -3454,16 +3454,15 @@
+ 			if ( hue == 0 )
+ 				hue = 0x3B2;
+ 
+-			this.EnsureCapacity( 50 + (text.Length * 2) );
++			this.EnsureCapacity( 45 + text.Length );
+ 
+ 			m_Stream.Write( (int) serial );
+ 			m_Stream.Write( (short) graphic );
+ 			m_Stream.Write( (byte) type );
+ 			m_Stream.Write( (short) hue );
+ 			m_Stream.Write( (short) font );
+-			m_Stream.WriteAsciiFixed( lang, 4 );
+ 			m_Stream.WriteAsciiFixed( name, 30 );
+-			m_Stream.WriteBigUniNull( text );
++			m_Stream.WriteAsciiNull( text );
+ 		}
+ 	}
+ 
+@@ -3893,7 +3892,7 @@
+ 
+ 	public sealed class MessageLocalizedAffix : Packet
+ 	{
+-		public MessageLocalizedAffix( Serial serial, int graphic, MessageType messageType, int hue, int font, int number, string name, AffixType affixType, string affix, string args ) : base( 0xCC )
++		public MessageLocalizedAffix( Serial serial, int graphic, MessageType messageType, int hue, int font, int number, string name, AffixType affixType, string affix, string args ) : base( 0x1C )
+ 		{
+ 			if ( name == null ) name = "";
+ 			if ( affix == null ) affix = "";
+@@ -3901,21 +3900,23 @@
+ 
+ 			if ( hue == 0 )
+ 				hue = 0x3B2;
++            
++            string text;
++            if ((affixType & AffixType.Prepend) != AffixType.Append)
++                text = string.Format("{0}{1}", affix, Core.CliLoc.SplitFormat(number, args));
++            else
++                text = string.Format("{0}{1}", Core.CliLoc.SplitFormat(number, args), affix);
++			this.EnsureCapacity( 45 + text.Length );
+ 
+-			this.EnsureCapacity( 52 + affix.Length + (args.Length * 2) );
+-
+ 			m_Stream.Write( (int) serial );
+ 			m_Stream.Write( (short) graphic );
+ 			m_Stream.Write( (byte) messageType );
+ 			m_Stream.Write( (short) hue );
+ 			m_Stream.Write( (short) font );
+-			m_Stream.Write( (int) number );
+-			m_Stream.Write( (byte) affixType );
+ 			m_Stream.WriteAsciiFixed( name, 30 );
+-			m_Stream.WriteAsciiNull( affix );
+-			m_Stream.WriteBigUniNull( args );
++			m_Stream.WriteAsciiNull( text );
+ 		}
+-	}
++    }
+ 
+ 	public sealed class ServerInfo
+ 	{
+Index: Region.cs
+===================================================================
+--- Region.cs	(revision 728)
++++ Region.cs	(working copy)
+@@ -206,7 +206,7 @@
+ 			m_Map = map;
+ 			m_Parent = parent;
+ 			m_Area = area;
+-			m_Dynamic = true;
++			m_Dynamic = area != null; // Zippy 11 June 2011
+ 			m_Music = this.DefaultMusic;
+ 
+ 			if ( m_Parent == null )
+@@ -221,6 +221,18 @@
+ 			}
+ 		}
+ 
++        // Zippy 11 June 2011
++        public Region(string name, Map map)
++        {
++            m_Name = name;
++            m_Map = map;
++            m_Dynamic = false;
++            m_Music = this.DefaultMusic;
++
++            m_ChildLevel = 0;
++            m_Priority = DefaultPriority;
++        }
++
+ 		public void Register()
+ 		{
+ 			if ( m_Registered )
+@@ -269,6 +281,11 @@
+ 			m_Sectors = sectors.ToArray();
+ 		}
+ 
++        public static void AddRegion(Region r)
++        {
++            r.Register();
++        }
++
+ 		public void Unregister()
+ 		{
+ 			if ( !m_Registered )
+Index: StringEntry.cs
+===================================================================
+--- StringEntry.cs	(revision 0)
++++ StringEntry.cs	(revision 0)
+@@ -0,0 +1,57 @@
++using System;
++using System.Text;
++using System.Collections;
++using System.Text.RegularExpressions;
++
++namespace Ultima
++{
++	public class StringEntry
++	{
++		private static Regex m_RegEx = new Regex( @"~(\d+)[_\w]+~", RegexOptions.Compiled|RegexOptions.IgnoreCase|RegexOptions.Singleline|RegexOptions.CultureInvariant );
++		private int m_Number;
++		private string m_Text;
++		private string m_FmtTxt;
++
++		public int Number{ get{ return m_Number; } }
++		public string Text{ get{ return m_Text; } }
++
++		public StringEntry( int number, string text )
++		{
++			m_Number = number;
++			m_Text = text;
++			m_FmtTxt = null;
++		}
++
++		private static object[] m_Args = new object[]{ "", "", "", "", "", "", "", "", "", "", "" };
++
++		public string Format( params object[] args )
++		{
++			if ( m_FmtTxt == null )
++				m_FmtTxt = m_RegEx.Replace( m_Text, @"{$1}" );
++			for(int i=0;i<args.Length && i<10;i++)
++				m_Args[i+1] = args[i];
++			return String.Format( m_FmtTxt, m_Args );
++		}
++
++		public string SplitFormat( string argstr )
++		{
++			if ( m_FmtTxt == null )
++				m_FmtTxt = m_RegEx.Replace( m_Text, @"{$1}" );
++			string[] args = argstr.Split( '\t' );// adds an extra on to the args array
++			for(int i=0;i<args.Length && i<10;i++)
++				m_Args[i+1] = args[i];
++			return String.Format( m_FmtTxt, m_Args );
++			/*
++			{
++				StringBuilder sb = new StringBuilder();
++				sb.Append( m_FmtTxt );
++				for(int i=0;i<args.Length;i++)
++				{
++					sb.Append( "|" );
++					sb.Append( args[i] == null ? "-null-" : args[i] );
++				}
++				throw new Exception( sb.ToString() );
++			}*/
++		}
++	}
++}
+Index: StringList.cs
+===================================================================
+--- StringList.cs	(revision 0)
++++ StringList.cs	(revision 0)
+@@ -0,0 +1,98 @@
++using System;
++using System.IO;
++using System.Text;
++using System.Collections;
++
++namespace Ultima
++{
++	public class StringList
++	{
++		private Hashtable m_Table;
++		private StringEntry[] m_Entries;
++		private string m_Language;
++
++		public StringEntry[] Entries{ get{ return m_Entries; } }
++		public Hashtable Table{ get{ return m_Table; } }
++		public string Language{ get{ return m_Language; } }
++
++		private static byte[] m_Buffer = new byte[1024];
++
++		public string Format( int num, params object[] args )
++		{
++			for(int i=0;i<m_Entries.Length;i++)
++			{
++				if ( m_Entries[i].Number == num )
++					return m_Entries[i].Format( args );
++			}
++
++			return String.Format( "CliLoc string {0} not found!", num );
++		}
++
++		public string SplitFormat( int num, string argstr )
++		{
++			for(int i=0;i<m_Entries.Length;i++)
++			{
++				if ( m_Entries[i].Number == num )
++					return m_Entries[i].SplitFormat( argstr );
++			}
++
++			return String.Format( "CliLoc string {0} not found!", num );
++		}
++
++		public StringList( string language )
++		{
++			m_Language = language;
++			m_Table = new Hashtable();
++
++
++            string path = Server.Core.FindDataFile(String.Format( "cliloc.{0}", language));
++
++			if ( path == null || !File.Exists( path ) )
++			{
++                Console.WriteLine("ERROR: Failed to find 'cliloc.{0}' datafile", language);
++				m_Entries = new StringEntry[0];
++				return;
++			}
++
++			ArrayList list = new ArrayList();
++
++			using ( BinaryReader bin = new BinaryReader( new FileStream( path, FileMode.Open, FileAccess.Read, FileShare.Read ), Encoding.UTF8 ) )
++			{
++				bin.ReadInt32();
++				bin.ReadInt16();
++
++				try
++				{
++					while ( true )
++					{
++						int number = bin.ReadInt32();
++						bin.ReadByte();
++						int length = bin.ReadInt16();
++
++						if ( length > m_Buffer.Length )
++							m_Buffer = new byte[(length + 1023) & ~1023];
++
++						bin.Read( m_Buffer, 0, length );
++
++						try
++						{
++							string text = Encoding.UTF8.GetString( m_Buffer, 0, length );
++
++							list.Add( new StringEntry( number, text ) );
++							m_Table[number] = text;
++						}
++						catch
++						{
++						}
++					}
++				}
++				catch ( System.IO.EndOfStreamException )
++				{
++					// end of file.  stupid C#.
++				}
++			}
++
++			m_Entries = (StringEntry[])list.ToArray( typeof( StringEntry ) );
++		}
++	}
++}
